@@ -11,6 +11,8 @@ class CookieEatingMonster:
 
     # No constructor - no attributes I care to include
 
+    # TODO: maybe make a Food class with a boolean for isCookie?
+
     def eat(self, food):
         if food.lower() != "cookie":
             # Raise our custom exception

@@ -46,3 +46,24 @@ MAKE SURE TO PUT THE MORE SPECIFIC EXCEPT BLOCKS FIRST!
 In the try/except above, the more generic ArithmeticError gets caught
 But we could have been more clear to the user, who's real problem is that they divided by zero
 """
+
+print("=================(Using our custom exception)")
+
+#Import and instantiate Cookie Eating Monster
+
+# Just like any other Exception, if we don't handle it, the code will crash
+
+from app.cookie_eating_monster import CookieEatingMonster, NotACookieError
+
+monster = CookieEatingMonster()
+
+# monster.eat("oatmeal") <---NOT HANDLED! Runtime will terminate!!!
+
+# Let's handle it instead
+try:
+    monster.eat("brussels sprouts")
+except NotACookieError as e:
+    print(f"Monster is mad! Exception Message: {e}")
+
+# Just cuz I feel bad
+monster.eat("cookie")
