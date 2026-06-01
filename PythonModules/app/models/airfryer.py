@@ -48,8 +48,12 @@ class AirFryer:
 
         # Reject usernames that contain vulgarity
         if re.search(r"javascript", username, re.IGNORECASE):
+
+            logging.warning("User tried to say a nono word")
+
             raise ValueError("Username cannot contain vulgarity")
 
+        logging.info(f"User {username} registered successfully")
         return f"User {username} registered successfully!"
 
 
@@ -64,6 +68,8 @@ class AirFryer:
 
         # First, check for valid weight
         if weight <= 0:
+
+            logging.warning(f"Invalid weight of {weight}")
             raise ValueError("Weight must be greater than 0")
 
         # calculate the tip exponentially based on weight
@@ -75,5 +81,7 @@ class AirFryer:
 
         # ceil() rounds up to the nearest integer
         # floor() rounds down to the nearest integer
+
+        logging.info(f"Calculated tip of {tip}")
 
         return tip

@@ -2,3 +2,62 @@
 2026-06-01 11:34:54,040 - INFO - AirFryer is frying food!
 2026-06-01 11:34:54,041 - INFO - Set temp to 350
 2026-06-01 11:34:54,041 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:36:00,152 - INFO - AirFryer is frying food!
+2026-06-01 11:36:00,152 - INFO - Set temp to 350
+2026-06-01 11:36:00,153 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:38:38,228 - INFO - AirFryer is frying food!
+2026-06-01 11:38:38,228 - INFO - Set temp to 350
+2026-06-01 11:38:38,228 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:38:38,228 - INFO - User FryGuy registered successfully
+2026-06-01 11:38:38,228 - WARNING - User tried to say a nono word
+2026-06-01 11:38:38,230 - INFO - Calculated tip of 1.2417566953150931
+2026-06-01 11:38:38,230 - INFO - Calculated tip of 311.9151794198158
+2026-06-01 11:38:38,230 - WARNING - Invalid weight of -5
+2026-06-01 11:38:49,401 - INFO - AirFryer is frying food!
+2026-06-01 11:38:49,402 - INFO - Set temp to 350
+2026-06-01 11:38:49,402 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:38:49,402 - INFO - User FryGuy registered successfully
+2026-06-01 11:38:49,402 - WARNING - User tried to say a nono word
+2026-06-01 11:38:49,403 - INFO - Calculated tip of 1.2417566953150931
+2026-06-01 11:38:49,403 - INFO - Calculated tip of 311.9151794198158
+2026-06-01 11:38:49,403 - WARNING - Invalid weight of -5
+2026-06-01 11:38:54,040 - INFO - AirFryer is frying food!
+2026-06-01 11:38:54,040 - INFO - Set temp to 350
+2026-06-01 11:38:54,040 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:38:54,041 - INFO - User FryGuy registered successfully
+2026-06-01 11:38:54,041 - WARNING - User tried to say a nono word
+2026-06-01 11:38:54,041 - INFO - Calculated tip of 1.2417566953150931
+2026-06-01 11:38:54,042 - INFO - Calculated tip of 311.9151794198158
+2026-06-01 11:38:54,042 - WARNING - Invalid weight of -5
+2026-06-01 11:38:58,148 - INFO - AirFryer is frying food!
+2026-06-01 11:38:58,148 - INFO - Set temp to 350
+2026-06-01 11:38:58,148 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:38:58,148 - INFO - User FryGuy registered successfully
+2026-06-01 11:38:58,148 - WARNING - User tried to say a nono word
+2026-06-01 11:38:58,148 - INFO - Calculated tip of 1.2417566953150931
+2026-06-01 11:38:58,148 - INFO - Calculated tip of 311.9151794198158
+2026-06-01 11:38:58,149 - WARNING - Invalid weight of -5
+2026-06-01 11:39:00,385 - INFO - AirFryer is frying food!
+2026-06-01 11:39:00,385 - INFO - Set temp to 350
+2026-06-01 11:39:00,385 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:39:00,386 - INFO - User FryGuy registered successfully
+2026-06-01 11:39:00,386 - WARNING - User tried to say a nono word
+2026-06-01 11:39:00,387 - INFO - Calculated tip of 1.2417566953150931
+2026-06-01 11:39:00,387 - INFO - Calculated tip of 311.9151794198158
+2026-06-01 11:39:00,387 - WARNING - Invalid weight of -5
+2026-06-01 11:39:13,544 - INFO - AirFryer is frying food!
+2026-06-01 11:39:13,544 - INFO - Set temp to 350
+2026-06-01 11:39:13,544 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:39:13,544 - INFO - User FryGuy registered successfully
+2026-06-01 11:39:13,544 - WARNING - User tried to say a nono word
+2026-06-01 11:39:13,545 - INFO - Calculated tip of 1.2417566953150931
+2026-06-01 11:39:13,545 - INFO - Calculated tip of 311.9151794198158
+2026-06-01 11:39:13,545 - WARNING - Invalid weight of -5
+2026-06-01 11:39:15,734 - INFO - AirFryer is frying food!
+2026-06-01 11:39:15,734 - INFO - Set temp to 350
+2026-06-01 11:39:15,734 - WARNING - Attempted to set temp to 3000
+2026-06-01 11:39:15,734 - INFO - User FryGuy registered successfully
+2026-06-01 11:39:15,735 - WARNING - User tried to say a nono word
+2026-06-01 11:39:15,735 - INFO - Calculated tip of 1.2417566953150931
+2026-06-01 11:39:15,735 - INFO - Calculated tip of 311.9151794198158
+2026-06-01 11:39:15,735 - WARNING - Invalid weight of -5

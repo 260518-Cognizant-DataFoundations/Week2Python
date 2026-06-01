@@ -21,7 +21,11 @@ print(fryer.fry())
 
 # Invoking set_temperature
 print(fryer.set_temperature(350)) # valid temp
-print(fryer.set_temperature(3000)) # invalid temp
+
+try:
+    print(fryer.set_temperature(3000)) # invalid temp
+except ValueError as e:
+    print(e)
 
 # Let's try to register a user
 print(fryer.register_user("FryGuy")) # valid one
