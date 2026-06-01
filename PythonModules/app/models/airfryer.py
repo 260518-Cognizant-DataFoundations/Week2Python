@@ -28,13 +28,13 @@ class AirFryer:
         if temp < 0 or temp > 400:
 
             # Warning log - typical for user error
-            logging.warning(f"Attempted to set temp to {temp}")
+            logging.warning("Attempted to set temp to %d", temp)
 
             raise ValueError("Temp must be between 0 and 400")
 
-        logging.info(f"Set temp to {temp}")
+        logging.info("Set temp to %d", temp)
 
-        return f"AirFryer temp set to {temp} degrees"
+        return "AirFryer temp set to %d degrees", temp
 
     # User Registration method - will use the regex module to validate username
     def register_user(self, username):
@@ -53,8 +53,8 @@ class AirFryer:
 
             raise ValueError("Username cannot contain vulgarity")
 
-        logging.info(f"User {username} registered successfully")
-        return f"User {username} registered successfully!"
+        logging.info("User %s registered successfully", username)
+        return "User %s registered successfully!", username
 
 
     # Using the math module to charge the user a tip after every airfry
@@ -69,7 +69,7 @@ class AirFryer:
         # First, check for valid weight
         if weight <= 0:
 
-            logging.warning(f"Invalid weight of {weight}")
+            logging.warning("Invalid weight of %.2f", weight)
             raise ValueError("Weight must be greater than 0")
 
         # calculate the tip exponentially based on weight
@@ -82,6 +82,6 @@ class AirFryer:
         # ceil() rounds up to the nearest integer
         # floor() rounds down to the nearest integer
 
-        logging.info(f"Calculated tip of {tip}")
+        logging.info("Calculated tip of %.2f", tip)
 
         return tip
