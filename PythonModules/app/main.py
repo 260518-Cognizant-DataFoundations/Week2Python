@@ -27,3 +27,16 @@ except ValueError as e:
     print(e)
     print("Please try again with a less vulgar name")
 
+
+# Calculating tip
+
+fryer.calculate_tip(5) # Valid weight
+fryer.calculate_tip(500) # Valid but heavy
+
+# Invalid weight
+try:
+    fryer.calculate_tip(-5)
+except ValueError as e:
+    print(e)
+    print("Please don't put negative weight in the air fryer")
+

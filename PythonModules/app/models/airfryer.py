@@ -42,6 +42,10 @@ class AirFryer:
         """
         import math
 
+        # First, check for valid weight
+        if weight <= 0:
+            raise ValueError("Weight must be greater than 0")
+
         # calculate the tip exponentially based on weight
         tip = math.pow(weight, 1.2) * .18
 
