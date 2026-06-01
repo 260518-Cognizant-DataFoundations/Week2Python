@@ -40,7 +40,7 @@ def test_set_temp_invalid(fryer):
 # TODO: You can test register_user, but I'm cutting it for calculate_tip
 
 
-# You can have multiple asserts in one tests
+# You can have multiple asserts in one test
 # NOTE: is this a good test? It's a little bulky and unfocused - maybe split it up
 def test_calculate_tip(fryer):
 
