@@ -1,0 +1,4 @@
+2026-06-01 11:31:07,332 - INFO - AirFryer is frying food!
+2026-06-01 11:34:54,040 - INFO - AirFryer is frying food!
+2026-06-01 11:34:54,041 - INFO - Set temp to 350
+2026-06-01 11:34:54,041 - WARNING - Attempted to set temp to 3000

@@ -4,6 +4,11 @@ import logging
 logging.basicConfig(
     level=logging.INFO, # Allow all levels of logs (INFO and everything more severe)
     format="%(asctime)s - %(levelname)s - %(message)s", # Format what the logs look like
+    # handlers are where our logs will be stored/displayed
+    handlers=[
+        logging.FileHandler("airfryer.logs"), # Logs will get stored in a file
+        logging.StreamHandler() # They'll also get printed to console
+    ]
 )
 
 class AirFryer:
@@ -12,12 +17,23 @@ class AirFryer:
 
     # Basic method that will be easy to test (nothing can go wrong)
     def fry(self):
+
+        # Our first log - just a basic INFO log
+        logging.info("AirFryer is frying food!")
+
         return "AirFryer is frying food!"
 
     # This method has something that can go wrong - makes for more interesting tests
     def set_temperature(self, temp):
         if temp < 0 or temp > 400:
+
+            # Warning log - typical for user error
+            logging.warning(f"Attempted to set temp to {temp}")
+
             raise ValueError("Temp must be between 0 and 400")
+
+        logging.info(f"Set temp to {temp}")
+
         return f"AirFryer temp set to {temp} degrees"
 
     # User Registration method - will use the regex module to validate username

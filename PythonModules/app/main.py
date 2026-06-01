@@ -11,12 +11,17 @@ We'll have two different classes in this app -
 We'll call the AirFryer methods below for fun (and to see our logs at work)
 """
 
-# SKIPPING fry() and set_temperature() - nothing new here
-
 from models.airfryer import AirFryer
 
 # Instantiate the AirFryer class to access its method
 fryer = AirFryer()
+
+# Invoking fry
+print(fryer.fry())
+
+# Invoking set_temperature
+print(fryer.set_temperature(350)) # valid temp
+print(fryer.set_temperature(3000)) # invalid temp
 
 # Let's try to register a user
 print(fryer.register_user("FryGuy")) # valid one
