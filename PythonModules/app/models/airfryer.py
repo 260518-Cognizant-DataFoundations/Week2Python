@@ -1,6 +1,10 @@
+import logging
 
-
-
+# Configuring a Logger with the Python Logging Module
+logging.basicConfig(
+    level=logging.INFO, # Allow all levels of logs (INFO and everything more severe)
+    format="%(asctime)s - %(levelname)s - %(message)s", # Format what the logs look like
+)
 
 class AirFryer:
 
