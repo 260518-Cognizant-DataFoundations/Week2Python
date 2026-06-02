@@ -56,7 +56,7 @@ print(f"\n Estimated February Sales: {february_sales}")
 # BOOLEAN INDEXING - a way to filter the list
 # Which days in Jav had sales above average?
 above_avg_sales = january_sales > np.mean(january_sales)
-print(f"Days with above avg sales: {above_avg_sales}")
+print(f"Days with above avg sales: {above_avg_sales}") # It's all booleans now!
 
 num_above_avg = np.sum(above_avg_sales) # True == 1, False == 0
 print(f"{num_above_avg} out of {len(january_sales)} days had above average sales")
