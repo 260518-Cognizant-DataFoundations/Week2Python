@@ -40,7 +40,7 @@ df = df[df["product"].notna()]
 df["units_sold"] = df["units_sold"].clip(lower=0) # values will be 0 AT LOWEST
 
 # Proof of na filtering and negative number cleaning
-print(df.head()) # That record with na is gone! No more negative values for sales!
+print(df.head()) # That record with na is gone! No more negative values for units sold!
 
 """
 PANDAS DATA TRANSFORMATION
@@ -51,3 +51,27 @@ But we want total units sold per product per month!!
 
 groupby() groups rows together! We'll see it below
 """
+
+# Use groupby() to get sales per product per month
+# reset_index is necessary to turn the groupby object back into a dataframe
+monthly_product_sales = df.groupby(["month", "product"])["units_sold"].sum().reset_index()
+
+print(type(monthly_product_sales)) # It's a dataframe!
+
+# Isolate each type of product into its own variable (more visibility, easier plotting)
+laptops = monthly_product_sales[monthly_product_sales["product"] == "Laptop"].reset_index()
+headphones = monthly_product_sales[monthly_product_sales["product"] == "Headphones"].reset_index()
+keyboards = monthly_product_sales[monthly_product_sales["product"] == "Keyboard"].reset_index()
+
+print("===== Monthly Product Sales =====")
+print(monthly_product_sales)
+
+print("~~~~~ Laptop Sales ~~~~~")
+# Print without the product name column
+print(laptops[["month", "units_sold"]]) # "Only include these columns"
+
+print("~~~~~ Headphones Sales ~~~~~")
+print(headphones[["month", "units_sold"]])
+
+print("~~~~~ Keyboard Sales ~~~~~")
+print(keyboards[["month", "units_sold"]])
