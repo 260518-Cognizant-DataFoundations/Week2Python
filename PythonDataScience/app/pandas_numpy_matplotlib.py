@@ -9,6 +9,8 @@ And visualize the data with Matplotlib!
 """
 
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 # GOAL: Visualize monthly sales trends by product
 # TODO: There's a lot more data in the dataset! You can make your own calcs and charts
@@ -58,7 +60,7 @@ monthly_product_sales = df.groupby(["month", "product"])["units_sold"].sum().res
 
 print(type(monthly_product_sales)) # It's a dataframe!
 
-# Isolate each type of product into its own variable (more visibility, easier plotting)
+# Isolate each type of product into DataFrames (more visibility, easier plotting)
 laptops = monthly_product_sales[monthly_product_sales["product"] == "Laptop"].reset_index()
 headphones = monthly_product_sales[monthly_product_sales["product"] == "Headphones"].reset_index()
 keyboards = monthly_product_sales[monthly_product_sales["product"] == "Keyboard"].reset_index()
@@ -77,3 +79,46 @@ print(headphones.drop(columns=["index", "product"])) # "Drop these columns"
 print("~~~~~ Keyboard Sales ~~~~~")
 # use loc to filter out columns we don't want and include columns we do
 print((keyboards[["month", "units_sold"]]))
+
+
+"""
+NUMPY CALCULATIONS
+
+Convert the data into Numpy Arrays, and calculate the overall average
+We'll use this average in our chart!
+"""
+
+# Extract the values from the DataFrame into a Numpy Array
+all_units = monthly_product_sales["units_sold"].values
+
+print(all_units) # It's a numpy array! Holding each month of sales
+
+overall_avg = np.mean(all_units)
+best_sales_num = np.max(all_units)
+worst_sales_num = np.min(all_units)
+
+print("===== Basic Sales Stats =====")
+print(f"Average Sales Overall: {overall_avg:.2f}")
+print(f"Best Sales Amount: {best_sales_num}")
+print(f"Worst Sales Amount: {worst_sales_num}")
+
+
+# LET'S PLOT ---------------
+
+# Using the DataFrames we defined above
+
+plt.plot(laptops["month"], laptops["units_sold"],
+         marker="o", label="Laptops", linewidth=2)
+
+plt.plot(headphones["month"], headphones["units_sold"],
+         marker="s", label="Headphones", linewidth=2)
+
+plt.plot(keyboards["month"], keyboards["units_sold"],
+         marker="^", label="Keyboards", linewidth=2)
+
+# Let's use the Numpy average calculation to plot an average line
+plt.axhline(y=overall_avg, color="gray", linestyle="--",
+            label=f"Overall Average ({overall_avg:.2f})")
+
+
+plt.show()
