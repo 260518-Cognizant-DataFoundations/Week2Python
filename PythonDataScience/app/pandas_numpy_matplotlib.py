@@ -71,7 +71,9 @@ print("~~~~~ Laptop Sales ~~~~~")
 print(laptops[["month", "units_sold"]]) # "Only include these columns"
 
 print("~~~~~ Headphones Sales ~~~~~")
-print(headphones[["month", "units_sold"]])
+# Let's get the same result, but by excluding columns instaed of naming the ones we want
+print(headphones.drop(columns=["index", "product"])) # "Drop these columns"
 
 print("~~~~~ Keyboard Sales ~~~~~")
-print(keyboards[["month", "units_sold"]])
+# use loc to filter out columns we don't want and include columns we do
+print((keyboards[["month", "units_sold"]]))
