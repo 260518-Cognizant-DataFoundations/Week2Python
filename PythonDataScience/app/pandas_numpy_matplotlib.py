@@ -45,5 +45,9 @@ print(df.head()) # That record with na is gone! No more negative values for sale
 """
 PANDAS DATA TRANSFORMATION
 
+The data is "clean" now, but we'd like to reformat it to help with our analysis
+Right now each row is one product/region/month combo
+But we want total units sold per product per month!!
 
+groupby() groups rows together! We'll see it below
 """
