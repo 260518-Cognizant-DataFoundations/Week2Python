@@ -73,7 +73,7 @@ print("~~~~~ Laptop Sales ~~~~~")
 print(laptops[["month", "units_sold"]]) # "Only include these columns"
 
 print("~~~~~ Headphones Sales ~~~~~")
-# Let's get the same result, but by excluding columns instaed of naming the ones we want
+# Let's get the same result, but by excluding columns instead of naming the ones we want
 print(headphones.drop(columns=["index", "product"])) # "Drop these columns"
 
 print("~~~~~ Keyboard Sales ~~~~~")
@@ -120,5 +120,10 @@ plt.plot(keyboards["month"], keyboards["units_sold"],
 plt.axhline(y=overall_avg, color="gray", linestyle="--",
             label=f"Overall Average ({overall_avg:.2f})")
 
+plt.title("Monthly Sales Trends by Product")
+plt.xlabel("Month")
+plt.ylabel("Units Sold")
+plt.legend(framealpha=0.3, loc="upper left")
+plt.grid(True, alpha=0.5)
 
 plt.show()
