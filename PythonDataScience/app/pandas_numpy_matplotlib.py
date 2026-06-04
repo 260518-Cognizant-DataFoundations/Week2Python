@@ -127,3 +127,32 @@ plt.legend(framealpha=0.3, loc="upper left")
 plt.grid(True, alpha=0.5)
 
 plt.show()
+
+print("===================(Creating, Updating, Deleting Files)")
+
+# Remember, we READ from a file at the very top of this script
+
+# Using our initial "df" dataframe - tell Pandas to NOT make a new index
+df.to_csv("data/sales_data_cleaned.csv", index=False)
+
+# Enrich the cleaned data with some of the calculations we made above
+df["overall_avg_sales"] = overall_avg # Our numpy calculation above
+
+# TODO: This is a super redundant thing to add, but we already had the value
+
+# Save this enriched file (overwrite the one we already saved)
+df.to_csv("data/sales_data_cleaned.csv", index=False)
+
+# We CAN change files directly without overwriting
+with open("data/sales_data_cleaned.csv", "a") as file: # "a" means append mode
+    file.write("HELLO I AM A NEW ROW IN THE FILE!")
+
+# Create and delete a new file (cuz I don't want to delete my old files)
+df.to_json("data/sales.json", index=False)
+
+# delete through the os builtin module
+import os
+
+if os.path.exists("data/sales.json"):
+    os.remove("data/sales.json")
+
